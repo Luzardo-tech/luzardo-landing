@@ -35,12 +35,33 @@ export type Database = {
         }
         Relationships: []
       }
+      signup_rate_limit: {
+        Row: {
+          attempt_count: number | null
+          first_attempt: string | null
+          identifier: string
+          last_attempt: string | null
+        }
+        Insert: {
+          attempt_count?: number | null
+          first_attempt?: string | null
+          identifier: string
+          last_attempt?: string | null
+        }
+        Update: {
+          attempt_count?: number | null
+          first_attempt?: string | null
+          identifier?: string
+          last_attempt?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      cleanup_old_rate_limits: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never
