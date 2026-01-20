@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const SignupForm = () => {
   const [name, setName] = useState("");
@@ -14,7 +15,10 @@ const SignupForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!name.trim() || !email.trim()) {
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim().toLowerCase();
+    
+    if (!trimmedName || !trimmedEmail) {
       toast({
         title: "Please fill in all fields",
         variant: "destructive"
@@ -22,10 +26,38 @@ const SignupForm = () => {
       return;
     }
 
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(trimmedEmail)) {
+      toast({
+        title: "Please enter a valid email address",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsLoading(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const { error } = await supabase
+      .from("early_access_signups")
+      .insert({ name: trimmedName, email: trimmedEmail });
+
+    if (error) {
+      setIsLoading(false);
+      if (error.code === "23505") {
+        toast({
+          title: "Already signed up!",
+          description: "This email is already on our waitlist.",
+        });
+      } else {
+        toast({
+          title: "Something went wrong",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+      }
+      return;
+    }
     
     setIsSubmitted(true);
     setIsLoading(false);
