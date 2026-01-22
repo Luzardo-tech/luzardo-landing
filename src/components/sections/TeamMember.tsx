@@ -24,8 +24,7 @@ const TeamMember = ({ name, role, bio, imageUrl }: TeamMemberProps) => {
         )}
       </div>
       <h3 className="font-serif text-lg font-bold text-foreground mb-1">{name || "Team Member"}</h3>
-      <p className="text-accent font-medium text-sm mb-2">{role || "Role"}</p>
-      <p className="text-muted-foreground text-sm max-w-xs mx-auto">{bio || "Bio coming soon..."}</p>
+      <p className="text-accent font-medium text-sm">{role || "Role"}</p>
     </div>
   );
 };
