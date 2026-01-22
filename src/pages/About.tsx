@@ -14,12 +14,12 @@ const teamMembersRowOne = [
 const teamMembersRowTwo = [
   { name: "Victor Ding", role: "Software Development", bio: "Background to be added" },
   { name: "Nicolas La Russa", role: "GTM", bio: "Background to be added" },
-  { name: "Mitch Larson", role: "GTM", bio: "Background to be added" },
+  { name: "Tanner Balluff", role: "Software Development", bio: "Background to be added" },
 ];
 
 const teamMembersRowThree = [
   { name: "SK Singh", role: "GTM", bio: "Background to be added" },
-  { name: "", role: "", bio: "" },
+  { name: "Mitch Larson", role: "GTM", bio: "Background to be added" },
 ];
 
 const About = () => {
