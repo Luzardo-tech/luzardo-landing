@@ -41,10 +41,10 @@ const Footer = () => {
               Interested in learning more about Luzardo?
             </p>
             <a 
-              href="mailto:hello@luzardo.com" 
+              href="mailto:hello@luzardo.tech" 
               className="text-accent hover:text-accent/80 transition-colors text-sm mt-2 inline-block"
             >
-              hello@luzardo.com
+              hello@luzardo.tech
             </a>
           </div>
         </div>
