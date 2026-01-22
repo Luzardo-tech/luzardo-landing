@@ -4,14 +4,22 @@ import TeamMember from "@/components/sections/TeamMember";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-// Placeholder team data - to be updated with real information
-const teamMembers = [
-  { name: "Founder 1", role: "CEO & Co-Founder", bio: "Background to be added" },
-  { name: "Founder 2", role: "CTO & Co-Founder", bio: "Background to be added" },
-  { name: "Founder 3", role: "COO & Co-Founder", bio: "Background to be added" },
-  { name: "Founder 4", role: "Head of Engineering", bio: "Background to be added" },
-  { name: "Founder 5", role: "Head of AI/ML", bio: "Background to be added" },
-  { name: "Founder 6", role: "Head of Business Development", bio: "Background to be added" },
+// Team data
+const teamMembersRowOne = [
+  { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "Background to be added" },
+  { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "Background to be added" },
+  { name: "Jorge Moros", role: "ML/AI", bio: "Background to be added" },
+];
+
+const teamMembersRowTwo = [
+  { name: "Victor Ding", role: "Software Development", bio: "Background to be added" },
+  { name: "Nicolas La Russa", role: "GTM", bio: "Background to be added" },
+  { name: "Mitch Larson", role: "GTM", bio: "Background to be added" },
+];
+
+const teamMembersRowThree = [
+  { name: "SK Singh", role: "GTM", bio: "Background to be added" },
+  { name: "", role: "", bio: "" },
 ];
 
 const About = () => {
@@ -110,14 +118,40 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto">
-              {teamMembers.map((member, index) => (
+            {/* Row 1 - 3 members */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto mb-12">
+              {teamMembersRowOne.map((member, index) => (
                 <TeamMember
                   key={index}
                   name={member.name}
                   role={member.role}
                   bio={member.bio}
                 />
+              ))}
+            </div>
+
+            {/* Row 2 - 3 members */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto mb-12">
+              {teamMembersRowTwo.map((member, index) => (
+                <TeamMember
+                  key={index}
+                  name={member.name}
+                  role={member.role}
+                  bio={member.bio}
+                />
+              ))}
+            </div>
+
+            {/* Row 3 - 2 members centered */}
+            <div className="flex justify-center gap-12 max-w-5xl mx-auto">
+              {teamMembersRowThree.map((member, index) => (
+                <div key={index} className="w-full sm:w-auto sm:min-w-[200px] lg:min-w-[280px]">
+                  <TeamMember
+                    name={member.name}
+                    role={member.role}
+                    bio={member.bio}
+                  />
+                </div>
               ))}
             </div>
           </div>
