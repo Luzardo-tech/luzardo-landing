@@ -26,9 +26,6 @@ const Navbar = () => {
             <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
             </Link>
-            <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-              Contact
-            </a>
           </div>
 
           {/* CTA Button */}
@@ -70,13 +67,6 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <a 
-                href="#contact" 
-                className="text-foreground py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
               <Button variant="hero" size="lg" className="mt-2" asChild>
                 <a href="#signup">Get Early Access</a>
               </Button>
