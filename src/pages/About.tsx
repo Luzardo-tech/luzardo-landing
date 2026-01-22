@@ -6,20 +6,20 @@ import { ArrowRight } from "lucide-react";
 
 // Team data
 const teamMembersRowOne = [
-  { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "Background to be added" },
-  { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "Background to be added" },
-  { name: "Jorge Moros", role: "ML/AI", bio: "Background to be added" },
+  { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "" },
+  { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "" },
+  { name: "Jorge Moros", role: "ML/AI", bio: "" },
 ];
 
 const teamMembersRowTwo = [
-  { name: "Victor Ding", role: "Software Development", bio: "Background to be added" },
-  { name: "Nicolas La Russa", role: "GTM", bio: "Background to be added" },
-  { name: "Tanner Balluff", role: "Software Development", bio: "Background to be added" },
+  { name: "Victor Ding", role: "Software Development", bio: "" },
+  { name: "Nicolas La Russa", role: "GTM", bio: "" },
+  { name: "Tanner Balluff", role: "Software Development", bio: "" },
 ];
 
 const teamMembersRowThree = [
-  { name: "SK Singh", role: "GTM", bio: "Background to be added" },
-  { name: "Mitch Larson", role: "GTM", bio: "Background to be added" },
+  { name: "SK Singh", role: "GTM", bio: "" },
+  { name: "Mitch Larson", role: "GTM", bio: "" },
 ];
 
 const About = () => {
