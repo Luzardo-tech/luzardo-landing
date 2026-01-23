@@ -31,7 +31,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="hero" size="default" asChild>
-              <a href="#signup">Get Early Access</a>
+              <a href="/#signup">Get Early Access</a>
             </Button>
           </div>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
                 About
               </Link>
               <Button variant="hero" size="lg" className="mt-2" asChild>
-                <a href="#signup">Get Early Access</a>
+                <a href="/#signup">Get Early Access</a>
               </Button>
             </div>
           </div>
