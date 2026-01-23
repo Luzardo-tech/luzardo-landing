@@ -4,22 +4,30 @@ import TeamMember from "@/components/sections/TeamMember";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+// Team photos
+import alejandroPhoto from "@/assets/team/alejandro.jpeg";
+import shrikanthPhoto from "@/assets/team/shrikanth.jpg";
+import jorgePhoto from "@/assets/team/jorge.jpg";
+import tannerPhoto from "@/assets/team/tanner.jpeg";
+import skPhoto from "@/assets/team/sk.jpeg";
+import mitchPhoto from "@/assets/team/mitch.jpg";
+
 // Team data
 const teamMembersRowOne = [
-  { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "" },
-  { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "" },
-  { name: "Jorge Moros", role: "ML/AI", bio: "" },
+  { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "", imageUrl: alejandroPhoto },
+  { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "", imageUrl: shrikanthPhoto },
+  { name: "Jorge Moros", role: "ML/AI", bio: "", imageUrl: jorgePhoto },
 ];
 
 const teamMembersRowTwo = [
   { name: "Victor Ding", role: "Software Development", bio: "" },
   { name: "Nicolas La Russa", role: "GTM", bio: "" },
-  { name: "Tanner Balluff", role: "Software Development", bio: "" },
+  { name: "Tanner Balluff", role: "Software Development", bio: "", imageUrl: tannerPhoto },
 ];
 
 const teamMembersRowThree = [
-  { name: "SK Singh", role: "GTM", bio: "" },
-  { name: "Mitch Larson", role: "GTM", bio: "" },
+  { name: "SK Singh", role: "GTM", bio: "", imageUrl: skPhoto },
+  { name: "Mitch Larson", role: "GTM", bio: "", imageUrl: mitchPhoto },
 ];
 
 const About = () => {
@@ -120,36 +128,39 @@ const About = () => {
 
             {/* Row 1 - 3 members */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto mb-12">
-              {teamMembersRowOne.map((member, index) => (
+            {teamMembersRowOne.map((member, index) => (
                 <TeamMember
                   key={index}
                   name={member.name}
                   role={member.role}
                   bio={member.bio}
+                  imageUrl={member.imageUrl}
                 />
               ))}
             </div>
 
             {/* Row 2 - 3 members */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto mb-12">
-              {teamMembersRowTwo.map((member, index) => (
+            {teamMembersRowTwo.map((member, index) => (
                 <TeamMember
                   key={index}
                   name={member.name}
                   role={member.role}
                   bio={member.bio}
+                  imageUrl={(member as any).imageUrl}
                 />
               ))}
             </div>
 
             {/* Row 3 - 2 members centered */}
             <div className="flex justify-center gap-12 max-w-5xl mx-auto">
-              {teamMembersRowThree.map((member, index) => (
+            {teamMembersRowThree.map((member, index) => (
                 <div key={index} className="w-full sm:w-auto sm:min-w-[200px] lg:min-w-[280px]">
                   <TeamMember
                     name={member.name}
                     role={member.role}
                     bio={member.bio}
+                    imageUrl={member.imageUrl}
                   />
                 </div>
               ))}
