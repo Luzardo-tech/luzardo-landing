@@ -3,9 +3,10 @@ interface TeamMemberProps {
   role: string;
   bio: string;
   imageUrl?: string;
+  imagePosition?: string;
 }
 
-const TeamMember = ({ name, role, bio, imageUrl }: TeamMemberProps) => {
+const TeamMember = ({ name, role, bio, imageUrl, imagePosition }: TeamMemberProps) => {
   return (
     <div className="text-center group">
       <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-4 rounded-full bg-secondary overflow-hidden shadow-soft group-hover:shadow-elevated transition-all duration-300 group-hover:scale-105">
@@ -14,6 +15,7 @@ const TeamMember = ({ name, role, bio, imageUrl }: TeamMemberProps) => {
             src={imageUrl} 
             alt={name}
             className="w-full h-full object-cover"
+            style={imagePosition ? { objectPosition: imagePosition } : undefined}
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary to-muted">

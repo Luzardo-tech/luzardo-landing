@@ -22,7 +22,7 @@ const teamMembersRowOne = [
 
 const teamMembersRowTwo = [
   { name: "Victor Ding", role: "Software Development", bio: "" },
-  { name: "Nicolas La Russa", role: "GTM", bio: "", imageUrl: nicolasPhoto },
+  { name: "Nicolas La Russa", role: "GTM", bio: "", imageUrl: nicolasPhoto, imagePosition: "center 20%" },
   { name: "Tanner Balluff", role: "Software Development", bio: "", imageUrl: tannerPhoto },
 ];
 
