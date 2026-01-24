@@ -11,6 +11,7 @@ import jorgePhoto from "@/assets/team/jorge.jpg";
 import tannerPhoto from "@/assets/team/tanner.jpeg";
 import skPhoto from "@/assets/team/sk.jpeg";
 import mitchPhoto from "@/assets/team/mitch.jpg";
+import nicolasPhoto from "@/assets/team/nicolas.png";
 
 // Team data
 const teamMembersRowOne = [
@@ -21,7 +22,7 @@ const teamMembersRowOne = [
 
 const teamMembersRowTwo = [
   { name: "Victor Ding", role: "Software Development", bio: "" },
-  { name: "Nicolas La Russa", role: "GTM", bio: "" },
+  { name: "Nicolas La Russa", role: "GTM", bio: "", imageUrl: nicolasPhoto },
   { name: "Tanner Balluff", role: "Software Development", bio: "", imageUrl: tannerPhoto },
 ];
 
