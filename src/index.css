@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@font-face {
+  font-family: 'Glonto';
+  src: url('/fonts/Glonto-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,79 +14,86 @@
 
 @layer base {
   :root {
-    /* Brand Colors - Earthy greens with warm neutrals */
-    --background: 40 20% 98%;
-    --foreground: 150 30% 12%;
+    /* Brand Colors - From Luzardo Brand Book */
+    --background: 0 0% 98%;
+    --foreground: 263 40% 23%;
 
-    --card: 40 15% 96%;
-    --card-foreground: 150 30% 12%;
+    --card: 0 0% 96%;
+    --card-foreground: 263 40% 23%;
 
-    --popover: 40 20% 98%;
-    --popover-foreground: 150 30% 12%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 263 40% 23%;
 
-    /* Primary - Deep Forest Green */
-    --primary: 152 45% 22%;
-    --primary-foreground: 40 20% 98%;
+    /* Primary - Brand Purple #382454 */
+    --primary: 263 40% 23%;
+    --primary-foreground: 0 0% 98%;
 
-    /* Secondary - Warm Sage */
-    --secondary: 145 20% 88%;
-    --secondary-foreground: 150 30% 18%;
+    /* Secondary - Olive Green #687049 */
+    --secondary: 75 18% 36%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Muted - Soft Cream */
-    --muted: 40 15% 92%;
-    --muted-foreground: 150 15% 45%;
+    /* Muted - Light Gray #EDEDED */
+    --muted: 0 0% 93%;
+    --muted-foreground: 263 20% 40%;
 
-    /* Accent - Golden Wheat */
-    --accent: 38 60% 55%;
-    --accent-foreground: 40 20% 98%;
+    /* Accent - Brand Orange #F18940 */
+    --accent: 24 86% 60%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Gold/Yellow #EFC700 for highlights */
+    --highlight: 48 100% 47%;
+    --highlight-foreground: 263 40% 23%;
 
-    --border: 145 15% 85%;
-    --input: 145 15% 85%;
-    --ring: 152 45% 22%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 263 40% 23%;
 
     --radius: 0.75rem;
 
     /* Custom brand tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(152, 45%, 22%) 0%, hsl(165, 35%, 28%) 50%, hsl(145, 30%, 35%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(40, 20%, 98%) 0%, hsl(145, 20%, 95%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(40, 15%, 98%) 0%, hsl(40, 15%, 96%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(24, 86%, 60%) 0%, hsl(24, 80%, 50%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 93%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 96%) 100%);
     
-    --shadow-soft: 0 4px 24px -4px hsl(150 30% 12% / 0.08);
-    --shadow-elevated: 0 12px 40px -8px hsl(150 30% 12% / 0.12);
-    --shadow-glow: 0 0 40px hsl(152 45% 22% / 0.15);
+    --shadow-soft: 0 4px 24px -4px hsl(263 40% 23% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(263 40% 23% / 0.12);
+    --shadow-glow: 0 0 40px hsl(24 86% 60% / 0.15);
   }
 
   .dark {
-    --background: 150 25% 8%;
-    --foreground: 40 20% 95%;
+    --background: 263 30% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 150 20% 12%;
-    --card-foreground: 40 20% 95%;
+    --card: 263 25% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 150 25% 8%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 263 30% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 152 40% 50%;
-    --primary-foreground: 150 25% 8%;
+    --primary: 24 86% 60%;
+    --primary-foreground: 263 40% 10%;
 
-    --secondary: 150 15% 18%;
-    --secondary-foreground: 40 20% 90%;
+    --secondary: 75 18% 30%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 150 15% 15%;
-    --muted-foreground: 145 12% 55%;
+    --muted: 263 20% 15%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 38 55% 50%;
-    --accent-foreground: 150 25% 8%;
+    --accent: 24 80% 55%;
+    --accent-foreground: 263 40% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --highlight: 48 100% 47%;
+    --highlight-foreground: 263 40% 10%;
 
-    --border: 150 15% 20%;
-    --input: 150 15% 20%;
-    --ring: 152 40% 50%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 263 20% 20%;
+    --input: 263 20% 20%;
+    --ring: 24 86% 60%;
   }
 }
 
@@ -93,7 +108,7 @@
   }
 
   h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Glonto', sans-serif;
   }
 }
 

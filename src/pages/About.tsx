@@ -40,7 +40,7 @@ const About = () => {
         <section className="py-24 subtle-gradient">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h1 className="font-display text-4xl md:text-5xl text-foreground mb-6">
                 About Luzardo
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
@@ -55,7 +55,7 @@ const About = () => {
         <section className="py-24 bg-card">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-8 text-center">
                 Our Story
               </h2>
               <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
@@ -85,7 +85,7 @@ const About = () => {
         <section className="py-24 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="font-display text-3xl md:text-4xl mb-6">
                 Our Mission
               </h2>
               <p className="text-xl text-primary-foreground/80 mb-8">
@@ -118,7 +118,7 @@ const About = () => {
         <section className="py-24 subtle-gradient">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
                 Meet Our Team
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -173,7 +173,7 @@ const About = () => {
         <section className="py-24 bg-card">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
                 Join Us on This Journey
               </h2>
               <p className="text-muted-foreground text-lg mb-8">

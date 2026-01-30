@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LuzardoLogo from "@/components/LuzardoLogo";
 
 const Footer = () => {
   return (
@@ -7,11 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary-foreground/20 rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">L</span>
-              </div>
-              <span className="font-serif text-xl font-bold">Luzardo</span>
+            <div className="mb-4">
+              <LuzardoLogo color="white" />
             </div>
             <p className="text-primary-foreground/70 text-sm">
               Revolutionizing livestock management through computer vision technology.
