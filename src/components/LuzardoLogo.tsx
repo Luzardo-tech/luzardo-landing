@@ -17,7 +17,7 @@ const LuzardoLogo = ({ className, variant = "full", color = "primary" }: Luzardo
   const CowIcon = () => (
     <svg 
       viewBox="0 0 200 200" 
-      className={cn("w-8 h-8", className)}
+      className={cn("w-10 h-10", className)}
       xmlns="http://www.w3.org/2000/svg"
     >
       <g className={colorClass}>
