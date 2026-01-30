@@ -32,7 +32,7 @@ const HowItWorks = () => {
     <section id="how-it-works" className="py-24 subtle-gradient">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
             How Luzardo Works
           </h2>
           <p className="text-muted-foreground text-lg">
@@ -53,7 +53,7 @@ const HowItWorks = () => {
                   <step.icon className="w-10 h-10 text-primary-foreground" />
                 </div>
                 <span className="text-sm font-medium text-accent">{step.step}</span>
-                <h3 className="font-serif text-xl font-bold text-foreground mt-2 mb-3">{step.title}</h3>
+                <h3 className="font-display text-xl text-foreground mt-2 mb-3">{step.title}</h3>
                 <p className="text-muted-foreground text-sm">{step.description}</p>
               </div>
             </div>

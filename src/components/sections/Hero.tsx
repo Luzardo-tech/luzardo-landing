@@ -19,7 +19,7 @@ const Hero = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             Precision Livestock Weighing, <br className="hidden md:block" />
             <span className="text-gradient">Powered by Vision</span>
           </h1>

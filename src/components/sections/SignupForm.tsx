@@ -73,7 +73,7 @@ const SignupForm = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
               Get Early Access
             </h2>
             <p className="text-muted-foreground text-lg">
@@ -87,7 +87,7 @@ const SignupForm = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary flex items-center justify-center">
                 <CheckCircle2 className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
+              <h3 className="font-display text-2xl text-foreground mb-2">
                 You're on the list!
               </h3>
               <p className="text-muted-foreground">
