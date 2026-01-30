@@ -13,28 +13,20 @@ import skPhoto from "@/assets/team/sk.jpeg";
 import mitchPhoto from "@/assets/team/mitch.jpg";
 import nicolasPhoto from "@/assets/team/nicolas.png";
 
-// Team member visibility flags
-const TEAM_VISIBILITY = {
-  jorgeMoros: false, // Set to true to show Jorge Moros on the website
-};
-
-// Team data
-const teamMembersRowOne = [
-  { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "", imageUrl: alejandroPhoto },
-  { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "", imageUrl: shrikanthPhoto },
-  ...(TEAM_VISIBILITY.jorgeMoros ? [{ name: "Jorge Moros", role: "ML/AI", bio: "", imageUrl: jorgePhoto }] : []),
+// Team data with visibility flags
+const allTeamMembers = [
+  { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "", imageUrl: alejandroPhoto, visible: true },
+  { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "", imageUrl: shrikanthPhoto, visible: true },
+  { name: "Jorge Moros", role: "ML/AI", bio: "", imageUrl: jorgePhoto, visible: false }, // Set to true to show
+  { name: "Victor Ding", role: "Software Development", bio: "", visible: true },
+  { name: "Nicolas La Russa", role: "GTM", bio: "", imageUrl: nicolasPhoto, imagePosition: "center 20%", visible: true },
+  { name: "Tanner Balluff", role: "Software Development", bio: "", imageUrl: tannerPhoto, visible: true },
+  { name: "SK Singh", role: "GTM", bio: "", imageUrl: skPhoto, visible: true },
+  { name: "Mitch Larson", role: "GTM", bio: "", imageUrl: mitchPhoto, visible: true },
 ];
 
-const teamMembersRowTwo = [
-  { name: "Victor Ding", role: "Software Development", bio: "" },
-  { name: "Nicolas La Russa", role: "GTM", bio: "", imageUrl: nicolasPhoto, imagePosition: "center 20%" },
-  { name: "Tanner Balluff", role: "Software Development", bio: "", imageUrl: tannerPhoto },
-];
-
-const teamMembersRowThree = [
-  { name: "SK Singh", role: "GTM", bio: "", imageUrl: skPhoto },
-  { name: "Mitch Larson", role: "GTM", bio: "", imageUrl: mitchPhoto },
-];
+// Filter to only visible members
+const visibleTeamMembers = allTeamMembers.filter(member => member.visible);
 
 const About = () => {
   return (
@@ -132,43 +124,17 @@ const About = () => {
               </p>
             </div>
 
-            {/* Row 1 - 3 members */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto mb-12">
-            {teamMembersRowOne.map((member, index) => (
+            {/* Team members grid - auto-layouts based on count */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto justify-items-center">
+              {visibleTeamMembers.map((member, index) => (
                 <TeamMember
                   key={index}
                   name={member.name}
                   role={member.role}
                   bio={member.bio}
                   imageUrl={member.imageUrl}
+                  imagePosition={member.imagePosition}
                 />
-              ))}
-            </div>
-
-            {/* Row 2 - 3 members */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto mb-12">
-            {teamMembersRowTwo.map((member, index) => (
-                <TeamMember
-                  key={index}
-                  name={member.name}
-                  role={member.role}
-                  bio={member.bio}
-                  imageUrl={(member as any).imageUrl}
-                />
-              ))}
-            </div>
-
-            {/* Row 3 - 2 members centered */}
-            <div className="flex justify-center gap-12 max-w-5xl mx-auto">
-            {teamMembersRowThree.map((member, index) => (
-                <div key={index} className="w-full sm:w-auto sm:min-w-[200px] lg:min-w-[280px]">
-                  <TeamMember
-                    name={member.name}
-                    role={member.role}
-                    bio={member.bio}
-                    imageUrl={member.imageUrl}
-                  />
-                </div>
               ))}
             </div>
           </div>
