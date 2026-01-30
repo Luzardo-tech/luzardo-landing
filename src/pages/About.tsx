@@ -13,11 +13,16 @@ import skPhoto from "@/assets/team/sk.jpeg";
 import mitchPhoto from "@/assets/team/mitch.jpg";
 import nicolasPhoto from "@/assets/team/nicolas.png";
 
+// Team member visibility flags
+const TEAM_VISIBILITY = {
+  jorgeMoros: false, // Set to true to show Jorge Moros on the website
+};
+
 // Team data
 const teamMembersRowOne = [
   { name: "Alejandro Ortiz Lopez", role: "CEO & Founder", bio: "", imageUrl: alejandroPhoto },
   { name: "Shrikanth Karthik", role: "Co-Founder, Head of Product", bio: "", imageUrl: shrikanthPhoto },
-  { name: "Jorge Moros", role: "ML/AI", bio: "", imageUrl: jorgePhoto },
+  ...(TEAM_VISIBILITY.jorgeMoros ? [{ name: "Jorge Moros", role: "ML/AI", bio: "", imageUrl: jorgePhoto }] : []),
 ];
 
 const teamMembersRowTwo = [
