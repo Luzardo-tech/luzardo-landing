@@ -124,17 +124,18 @@ const About = () => {
               </p>
             </div>
 
-            {/* Team members grid - auto-layouts based on count */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto justify-items-center">
+            {/* Team members - flexbox for centered incomplete rows */}
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12 max-w-6xl mx-auto">
               {visibleTeamMembers.map((member, index) => (
-                <TeamMember
-                  key={index}
-                  name={member.name}
-                  role={member.role}
-                  bio={member.bio}
-                  imageUrl={member.imageUrl}
-                  imagePosition={member.imagePosition}
-                />
+                <div key={index} className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-2rem)] xl:w-[calc(25%-2rem)]">
+                  <TeamMember
+                    name={member.name}
+                    role={member.role}
+                    bio={member.bio}
+                    imageUrl={member.imageUrl}
+                    imagePosition={member.imagePosition}
+                  />
+                </div>
               ))}
             </div>
           </div>

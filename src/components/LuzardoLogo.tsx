@@ -15,9 +15,9 @@ const LuzardoLogo = ({ className, variant = "full", color = "primary" }: Luzardo
 
   // Cow icon SVG paths from brand book
   const CowIcon = () => (
-    <svg 
-      viewBox="0 0 200 200" 
-      className={cn("w-10 h-10", className)}
+    <svg
+      viewBox="0 0 200 200"
+      className={cn("w-12 h-12", className)}
       xmlns="http://www.w3.org/2000/svg"
     >
       <g className={colorClass}>
@@ -38,7 +38,7 @@ const LuzardoLogo = ({ className, variant = "full", color = "primary" }: Luzardo
     <div className="flex items-center gap-2">
       <CowIcon />
       <span className={cn(
-        "font-display text-xl font-normal tracking-wide",
+        "font-display text-2xl font-normal tracking-wide",
         color === "white" ? "text-white" : color === "accent" ? "text-accent" : "text-primary"
       )}>
         Luzardo
